@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LoveWorld Events</title>
+  <link rel="stylesheet" href="events.css" />
+</head>
+<body>
+  <header>
+    <h1>LoveWorld Events</h1>
+  </header>
+
+  <main>
+    <!-- Event Form -->
+    <section class="event-form">
+      <h2>Post a New Event</h2>
+      <input type="text" id="eventTitle" placeholder="Event Title" />
+      <textarea id="eventBody" placeholder="Event Description"></textarea>
+      <input type="text" id="eventPerson" placeholder="Posted By" />
+      <button onclick="postEvent()">Post Event</button>
+    </section>
+
+    <!-- Event List -->
+    <section class="event-list">
+      <h2>Recent Events</h2>
+      <div id="eventsContainer"></div>
+    </section>
+  </main>
+
+  <script type="module" src="events.js"></script>
+</body>
+</html>

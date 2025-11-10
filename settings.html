@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings</title>
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+  <header>
+    <h1>Settings</h1>
+  </header>
+
+  <main class="settings-container">
+    <section class="setting">
+      <h2>Theme</h2>
+      <button onclick="setTheme('light')">🌞 Light Mode</button>
+      <button onclick="setTheme('dark')">🌙 Dark Mode</button>
+    </section>
+
+    <section class="setting">
+      <h2>Language</h2>
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="fr">French</option>
+        <option value="sw">Swahili</option>
+      </select>
+    </section>
+
+    <section class="setting">
+      <h2>Notifications</h2>
+      <label>
+        <input type="checkbox" id="emailNotif" /> Email Alerts
+      </label>
+      <label>
+        <input type="checkbox" id="smsNotif" /> SMS Alerts
+      </label>
+    </section>
+  </main>
+
+  <script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #002b5c;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.soul-form, .soul-list {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.soul-form input {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.soul-form button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.soul-form button:hover {
+  background: #005fa3;
+}
+
+.soul-card {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.soul-card h3 {
+  margin: 0;
+  color: #002b5c;
+}
+
+.soul-meta {
+  font-size: 0.9rem;
+  color: #555;
+}

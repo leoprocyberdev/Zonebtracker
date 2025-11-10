@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Church Member Database</title>
+  <link rel="stylesheet" href="database.css" />
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      getDocs,
+      doc,
+      deleteDoc,
+      updateDoc,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA5FhfzWFLpzQh_fHUOy2WgvPWfysLrFpA",
+      authDomain: "dig4beta.firebaseapp.com",
+      projectId: "dig4beta",
+      storageBucket: "dig4beta.firebasestorage.app",
+      messagingSenderId: "443536119611",
+      appId: "1:443536119611:web:ecfb7377451c440271491e",
+      measurementId: "G-YR062QNT4S"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        window.location.href = "login.html";
+      }
+    });
+
+    window.db = db;
+    window.firestoreCollection = collection;
+    window.firestoreAddDoc = addDoc;
+    window.firestoreGetDocs = getDocs;
+    window.firestoreDoc = doc;
+    window.firestoreDeleteDoc = deleteDoc;
+    window.firestoreUpdateDoc = updateDoc;
+    window.firestoreOnSnapshot = onSnapshot;
+  </script>
+</head>
+<body>
+  <header>
+    <h1>BLW UG Member Database</h1>
+  </header>
+
+  <main>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by name or location..." />
+      <div class="export-buttons">
+        <button onclick="exportToExcel()">Export to Excel</button>
+        <button onclick="window.print()">Print PDF</button>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table id="memberDataTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Location</th>
+            <th>Class</th>
+            <th>Date Joined</th>
+            <th>Foundation Progress</th>
+            <th>Attendance</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="memberTable">
+          <!-- Dynamic rows -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="database.js"></script>
+</body>
+</html>

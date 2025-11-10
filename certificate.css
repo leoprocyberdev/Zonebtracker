@@ -1,0 +1,93 @@
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #f0f4f8, #dbeafe);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+}
+
+.certificate-container {
+  position: relative;
+  max-width: 900px;
+  padding: 2rem;
+  background: #fff;
+  border: 12px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  text-align: center;
+
+  /* Gold decorative border */
+  background-image: linear-gradient(white, white),
+    repeating-linear-gradient(45deg, gold, #ffd700 10px, #f5deb3 20px);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.certificate { padding: 2rem; }
+
+.logo { max-width: 120px; margin-bottom: 1rem; }
+
+.corner {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  opacity: 0.7;
+}
+
+.top-left { top: 8px; left: 8px; }
+.top-right { top: 8px; right: 8px; }
+.bottom-left { bottom: 8px; left: 8px; }
+.bottom-right { bottom: 8px; right: 8px; }
+
+h1 {
+  font-size: 2.5rem;
+  color: #002b5c;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #0077cc;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.subtitle { font-size: 1.3rem; margin: 0.5rem 0; color: #444; }
+
+h2 { font-size: 2rem; margin: 1rem 0; color: #0077cc; font-weight: bold; text-shadow: 2px 2px #dbeafe; }
+
+h3 { font-size: 1.6rem; margin: 1rem 0; color: #28a745; text-transform: uppercase; }
+
+.body-text { margin: 0.5rem 0; font-size: 1.1rem; color: #333; }
+
+.date-line { margin-top: 1rem; font-weight: bold; color: #555; }
+
+.signature { margin-top: 2rem; font-style: italic; font-size: 1.1rem; color: #002b5c; }
+
+.print-container { margin-top: 1.5rem; }
+
+.print-button {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, #0077cc, #005fa3);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.print-button:hover { background: linear-gradient(90deg, #005fa3, #003f73); }
+
+/* Print styling */
+@media print {
+  .print-container { display: none; }
+  body { background: white; min-height: auto; }
+  .certificate-container {
+    box-shadow: none;
+    border: 8px solid gold;
+    background-image: none; /* simpler for print clarity */
+  }
+  .corner { opacity: 1; }
+}

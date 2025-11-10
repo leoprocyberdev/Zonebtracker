@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLW UG Zone B</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>BLW UG ZONE B SIMPLE DATABASE</h1>
+  </header>
+
+  <main class="dashboard">
+    <!-- Database -->
+    <div class="card" onclick="openSection('database')">
+      <div class="icon">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="#0077cc">
+          <path d="M4 6v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6H4zm2 0h12v2H6V6zm0 4h12v2H6v-2zm0 4h12v2H6v-2z"/>
+        </svg>
+      </div>
+      <p>BLW UG DATA BASE</p>
+    </div>
+
+    <!-- Foundation School -->
+    <div class="card" onclick="openSection('foundation')">
+      <div class="icon">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="#28a745">
+          <path d="M12 2L4 5v6c0 5.25 3.75 10.25 8 11 4.25-.75 8-5.75 8-11V5l-8-3z"/>
+        </svg>
+      </div>
+      <p>FOUNDATION SCHOOL</p>
+    </div>
+
+    <!-- Events -->
+    <div class="card" onclick="openSection('events')">
+      <div class="icon">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="#ff9800">
+          <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/>
+        </svg>
+      </div>
+      <p>Love World Events</p>
+    </div>
+
+    <!-- Soul Tracker -->
+    <div class="card" onclick="openSection('soultracker')">
+      <div class="icon">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="#9c27b0">
+          <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+      </div>
+      <p>Soul Tracker</p>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <button onclick="goHome()">🏠</button>
+    <button onclick="openSettings()">⚙️</button>
+    <button onclick="addNew()">➕</button>
+    <button onclick="openProfile()">👤</button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

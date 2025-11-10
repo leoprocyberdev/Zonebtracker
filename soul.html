@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soul Tracker</title>
+  <link rel="stylesheet" href="soul.css" />
+</head>
+<body>
+  <header>
+    <h1>Soul Tracker</h1>
+  </header>
+
+  <main>
+    <!-- Form to add a new soul -->
+    <section class="soul-form">
+      <h2>Add New Soul</h2>
+      <input type="text" id="soulName" placeholder="Full Name" />
+      <input type="text" id="soulContact" placeholder="Contact Info" />
+      <input type="text" id="soulInviter" placeholder="Invited By" />
+      <button onclick="addSoul()">Add Soul</button>
+    </section>
+
+    <!-- List of souls -->
+    <section class="soul-list">
+      <h2>Souls Won</h2>
+      <div id="soulsContainer"></div>
+    </section>
+  </main>
+
+  <script type="module" src="soul.js"></script>
+</body>
+</html>

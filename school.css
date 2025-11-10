@@ -1,0 +1,38 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: #002b5c;
+  color: white;
+  padding: 1.5rem;
+}
+
+.classes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.class-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-weight: bold;
+  color: #002b5c;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+  background: #e6f0ff;
+}

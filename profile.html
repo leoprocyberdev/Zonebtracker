@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <header>
+    <h1>User Profile</h1>
+  </header>
+
+  <main class="profile-container">
+    <img src="images/profile-placeholder.png" alt="Profile Picture" class="profile-pic"/>
+    <h2 id="profileName">TWINOMUJUNI</h2>
+    <p id="profileEmail">example@email.com</p>
+
+    <section class="profile-actions">
+      <button onclick="editProfile()">✏️ Edit Profile</button>
+      <button onclick="logout()">🚪 Logout</button>
+    </section>
+  </main>
+
+  <script src="profile.js"></script>
+</body>
+</html>
